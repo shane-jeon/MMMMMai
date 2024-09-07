@@ -18,18 +18,22 @@ MMMMMai is a project intended to be completely useless, but also hilarious. Curb
 ```bash
 git clone https://github.com/yourusername/MMMMMai.git
 cd MMMMMai/workers/typescript-based-api
+```
 
 ### 2. Intall Dependencies
 ```bash
 npm install
+```
 
 ### 3. Initialize the Project
 ```bash
 npm init
+```
 
 ### 4. Run the Development Server
 ```bash
 npm run dev
+```
 
 ## Usage
 - Enter Ingredients: Open the app in your browser, and input a list of ingredients you have at home.
