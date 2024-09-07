@@ -7,19 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- NAV BAR -->
+    <header>
+        <p class="logo">
+            Useless Recipes
+        </p>
+        <nav class="nav">
+            <p>FAQ</p>
+            <p>Contact</p>
+        </nav>
+    </header>
+    <!-- BODY -->
     <div class="wrapper">
+        <!-- LEFT BOX -->
         <div class="container">
-            <h1>Useless Recipes</h1>
-            <input type="text" id="wordInput" placeholder="Enter your ingredients">
-            <button id="searchButton">Search</button>
+            <div class="entry">
+                <h1>Instructions</h1>
+                <p>What ingredients do you have?</p>
+                <input type="text" id="wordInput" placeholder="Enter your ingredients">
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
+        <!-- RIGHT BOX -->
+        <div class="result">
             <div id="resultSection">
                 <h2>Useless recipes:</h2>
                 <p id="definition"></p>
             </div>
         </div>
-        <div class="footer">
+        <!-- <div class="footer">
             Created with 🧡 on Cloudflare Pages with Workers AI
-        </div>
+        </div> -->
     </div>
     <script src="script.js"></script>
 </body>

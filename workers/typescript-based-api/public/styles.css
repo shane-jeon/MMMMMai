@@ -5,88 +5,77 @@ body {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100vh;
-}
-
-.container {
-	text-align: left;
-	background-color: #058261; /* Light yellow color */
+	display: flex; /* Use flexbox for layout */
+	justify-content: space-between; /* Distribute space evenly */
+	align-items: stretch; /* Ensure both sides stretch equally */
+	gap: 20px; /* Add space between the containers */
 	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	position: relative;
-	width: 80%;
-	max-width: 600px;
-	flex: 1; /* Allow the container to grow */
-	overflow-y: auto;
+	min-height: 100vh; /* Set minimum height for the wrapper */
 }
 
-.container::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(to bottom, blue 1px, transparent 1px);
-	background-size: 100% 32px; /* Adjust this value to change line spacing */
-	z-index: -1;
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 30px;
 }
 
-.container::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 40px; /* Adjust this value for the left margin */
-	width: 2px;
-	height: 100%;
-	background-color: red;
-	z-index: -1;
+.nav {
+	display: flex;
+	gap: 10px;
+	font-weight: lighter;
+	font-size: 25px;
 }
 
-#wordInput {
+.logo {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+/* Ensure equal size for both containers */
+.container,
+.result {
+	flex: 1; /* Make both elements take equal space */
+	padding: 20px;
+	border: 1px solid #ccc; /* Optional: Add a border to make them visually distinct */
+	background-color: #f9f9f9; /* Optional: Light background color */
+	display: flex;
+	flex-direction: column; /* Ensure content stacks vertically */
+	min-height: 100%; /* Ensure both sides expand equally in height */
+}
+
+/* Center the content in the left container */
+.container {
+	display: flex;
+	justify-content: center; /* Center content horizontally */
+	align-items: center; /* Center content vertically */
+}
+
+/* Entry section (input + button) */
+.entry {
+	display: flex;
+	flex-direction: column; /* Stack elements vertically */
+	justify-content: center; /* Center elements vertically */
+	align-items: center; /* Center input and button horizontally */
+	width: 100%; /* Ensure it takes full width inside the container */
+}
+
+input {
 	padding: 10px;
-	margin-top: 10px;
-	width: 80%;
+	margin-bottom: 10px; /* Add space below the input */
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	width: 400px; /* Fixed width for the input box - Adjust as needed */
+	height: 200px; /* Fixed height for the input box - Adjust as needed */
+	box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
-#searchButton {
+button {
 	padding: 10px 20px;
-	margin-top: 10px;
-	background-color: #007bff;
-	color: #fff;
+	background-color: #333;
+	color: white;
 	border: none;
-	border-radius: 5px;
 	cursor: pointer;
 }
 
-#searchButton:hover {
-	background-color: #0056b3;
-}
-
-#resultSection {
-	margin-top: 20px;
-	display: none;
-}
-
-#definition {
-	font-size: 1.2em;
-	color: #333;
-	white-space: pre-wrap; /* Ensures text wraps properly */
-	line-height: 32px; /* Match this value to the line spacing */
-	padding-left: 50px; /* Indent to match the margin line */
-}
-
-.footer {
-	text-align: center;
-	padding: 10px;
-	background-color: #0056b3; /* Darker Cloudflare blue */
-	color: white; /* Ensure text is readable */
-	width: 100%;
-	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+button:hover {
+	background-color: #555;
 }
