@@ -1,34 +1,45 @@
-# Workers AI Hackathon Helper Starter Kit
+# MMMMMai: Make Less With Less
 
-**[🔗 shrty.dev/hackathon-helper](https://shrty.dev/hackathon-helper)**
+## About
+MMMMMai is a project intended to be completely useless, but also hilarious. Curb your hunger by generating disgusting, inedible recipes with the ingredients you have at home! MMMMMai will not only generate the recipe but also create a sample image of the meal using cutting-edge AI—don’t be fooled by the strategic plating—you will not want to eat again after trying these recipes.
 
-## Python
+## Features
+- **Bad Recipe Generator**: Input random ingredients you have at home, and MMMMMai will create the most awful, unappetizing recipes using Cloudflare’s LLaMA-3.1-8B-Instruct model.
+- **AI-Generated Meal Images**: Generates an image of your disgusting meal using the Stable-Diffusion-XL-Lightning model, so you can visualize the horror before you decide to (not) cook.
 
-[![Watch AI Hackathon Video on YouTube - Python and Streamlit](https://img.youtube.com/vi/sJQUuN7R8sA/0.jpg)](https://youtu.be/sJQUuN7R8sA)
+## Requirements
+- Node.js (v14 or higher)
+- Cloudflare Account with access to Workers AI (LLaMA-3.1-8B-Instruct, Stable-Diffusion-XL-Lightning)
+- API Tokens for Cloudflare Workers AI
 
-There is a [Streamlit](https://streamlit.io) application in the [Python folder](./python/) that uses of the [official Python SDK](https://github.com/cloudflare/cloudflare-python) to hit the REST API.
+## Getting Started
 
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/MMMMMai.git
+cd MMMMMai/workers/typescript-based-api
 
-## Workers - Serverless Application
+### 2. Intall Dependencies
+```bash
+npm install
 
-[![Watch AI Hackathon Video on YouTube - JavaScript base Cloudflare Workers AI App](https://img.youtube.com/vi/No4edhTwACg/0.jpg)](https://youtu.be/No4edhTwACg)
+### 3. Initialize the Project
+```bash
+npm init
 
-In the [Workers folder](./workers/) there are some starters.
+### 4. Run the Development Server
+```bash
+npm run dev
 
-- [hello-workers-ai](./workers/hello-world-ai) : Boilerplate Workers code calling AI.
-- [hello-hono-ai](./workers/hello-hono-ai): Shows off using the amazing [Hono](https://hono.dev) frawework 🔥 and adds some streaming examples.
-- [typescript-based-api](./workers/typescript-based-api): A demo app that [Hono](https://hono.dev) 🔥 TypeScript based API that allows for streaming and a static `assets` based front-end. Shows off how to handle streaming in both client and server.
+## Usage
+- Enter Ingredients: Open the app in your browser, and input a list of ingredients you have at home.
+- Generate Recipe: Click "Generate Recipe" to receive a hilariously bad recipe.
+- View the Image: See the AI-generated image of your unappetizing meal.
+- Laugh: Be prepared to laugh at how bad the result looks and sounds!
 
-## Pages
-
-- Check out the [Vanilla Chat App repo](https://github.com/craigsdennis/vanilla-chat-workers-ai) for a template.
-- Take the [Floor is LLaVa](https://github.com/craigsdennis/floor-is-llava-workers-ai) Vision app template for spin.
-- Meet [Homie](https://github.com/craigsdennis/lightbulb-moment-tool-calling) a Function Calling enabled Home Automation assistant. Give your LLM more superpowers.
-
-## Resources
-
-- 📚 [Workers AI docs](https://developers.cloudflare.com/workers-ai/)
-- 🎥 [Workers AI Explainer Video](https://youtu.be/l7EwEpZyTpw)
-- 💬 [Discord](https://discord.cloudflare.com)
-- 🎥 [Learn Cloudflare Workers - Full Course for Beginners](https://youtu.be/H7Qe96fqg1M)
-- 🎥 [Stateful Apps with Cloudflare Workers - Full Course (APIs, Workers KV, D1, SQLite, Prisma)](https://youtu.be/QTsaAhFvX9o)
+## Technologies Used
+- Cloudflare Workers AI:
+    LLaMA-3.1-8B-Instruct: For generating absurd recipe descriptions.
+    Stable-Diffusion-XL-Lightning: For generating corresponding images based on the recipe.
+- Node.js: Server-side environment for running the application.
+- Hono: Lightweight web framework for handling API requests and responses.
