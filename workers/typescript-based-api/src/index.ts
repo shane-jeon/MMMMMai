@@ -4,6 +4,18 @@ import { events } from 'fetch-event-stream';
 
 const app = new Hono<{ Bindings: Env }>();
 
+app.get('/generated_image', async (c) => {
+	const prompt = c.req.query("q");
+	console.log("prompt", prompt);
+	const results = await c.env.AI.run("@cf/bytedance/stable-diffusion-xl-lightning", {
+		prompt: prompt
+	});
+	console.log("results", results)
+	return c.body(results, 200, {
+		"Content-Type": "image/png"
+	});
+})
+
 app.post('/api/etymology', async (c) => {
 	const payload = await c.req.json();
 	const eventStream = await c.env.AI.run('@cf/meta/llama-3.1-8b-instruct', {

@@ -26,4 +26,7 @@ document.getElementById('searchButton').addEventListener('click', async function
 		}
 		definition.innerText += value;
 	}
+	const photo = document.createElement('img');
+	photo.src = '/generated_image?q=' + encodeURIComponent(definition.innerText);
+	document.body.appendChild(photo);
 });
