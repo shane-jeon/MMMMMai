@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Useless Recipe Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 </head>
 <body>
     <!-- NAV BAR -->
     <header>
-        <p class="logo">
-            Useless Recipes
-        </p>
+        <div class="logo">
+            <img src="mmmmmai.svg" alt="Logo" width="40" height="40"> <!-- Reference to your SVG file -->
+        </div>
         <nav class="nav">
             <p>FAQ</p>
             <p>Contact</p>
@@ -30,15 +31,15 @@
         </div>
         <!-- RIGHT BOX -->
         <div class="result">
+            <!-- Lottie animation container -->
+            <div id="lottie-container" style="display: none;"></div>
             <div id="resultSection">
-                <h2>Useless recipes:</h2>
-                <!-- <img alt="placeholder" id="photo" />  -->
+                <h2>Recipe:</h2>
+                <!-- Image appears first -->
+                <img alt="Generated image" id="photo" style="display: none;" />
                 <p id="definition"></p>
             </div>
         </div>
-        <!-- <div class="footer">
-            Created with 🧡 on Cloudflare Pages with Workers AI
-        </div> -->
     </div>
     <script src="script.js"></script>
 </body>

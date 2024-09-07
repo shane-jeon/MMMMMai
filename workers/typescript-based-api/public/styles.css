@@ -5,12 +5,12 @@ body {
 }
 
 .wrapper {
-	display: flex; /* Use flexbox for layout */
-	justify-content: space-between; /* Distribute space evenly */
-	align-items: stretch; /* Ensure both sides stretch equally */
-	gap: 20px; /* Add space between the containers */
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 20px;
 	padding: 20px;
-	min-height: 100vh; /* Set minimum height for the wrapper */
+	min-height: 100vh;
 }
 
 header {
@@ -27,45 +27,46 @@ header {
 }
 
 .logo {
-	font-weight: bold;
-	font-size: 30px;
+	display: flex;
+	align-items: center;
 }
 
-/* Ensure equal size for both containers */
+.logo img {
+	width: 200px;
+	height: 200px;
+}
 .container,
 .result {
-	flex: 1; /* Make both elements take equal space */
+	flex: 1;
 	padding: 20px;
-	border: 1px solid #ccc; /* Optional: Add a border to make them visually distinct */
-	background-color: #f9f9f9; /* Optional: Light background color */
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
 	display: flex;
-	flex-direction: column; /* Ensure content stacks vertically */
-	min-height: 100%; /* Ensure both sides expand equally in height */
+	flex-direction: column;
+	min-height: 100%;
 }
 
-/* Center the content in the left container */
 .container {
 	display: flex;
-	justify-content: center; /* Center content horizontally */
-	align-items: center; /* Center content vertically */
+	justify-content: center;
+	align-items: center;
 }
 
-/* Entry section (input + button) */
 .entry {
 	display: flex;
-	flex-direction: column; /* Stack elements vertically */
-	justify-content: center; /* Center elements vertically */
-	align-items: center; /* Center input and button horizontally */
-	width: 100%; /* Ensure it takes full width inside the container */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 input {
 	padding: 10px;
-	margin-bottom: 10px; /* Add space below the input */
+	margin-bottom: 10px;
 	border: 1px solid #ccc;
-	width: 400px; /* Fixed width for the input box - Adjust as needed */
-	height: 200px; /* Fixed height for the input box - Adjust as needed */
-	box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+	width: 400px;
+	height: 200px;
+	box-sizing: border-box;
 }
 
 button {
@@ -78,4 +79,26 @@ button {
 
 button:hover {
 	background-color: #555;
+}
+
+/* Center the image both horizontally and vertically */
+#photo {
+	width: 100%; /* Adjust width as needed */
+	max-width: 400px; /* Set a maximum width for the image */
+	margin: 0 auto; /* Center horizontally */
+	display: block;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center vertically */
+	align-items: center; /* Center horizontally */
+}
+
+/* Lottie animation container */
+#lottie-container {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
 }
