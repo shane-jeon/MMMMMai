@@ -47,3 +47,9 @@ npm run dev
     Stable-Diffusion-XL-Lightning: For generating corresponding images based on the recipe.
 - Node.js: Server-side environment for running the application.
 - Hono: Lightweight web framework for handling API requests and responses.
+
+## Example
+
+https://github.com/user-attachments/assets/58799b85-3398-4c9a-919c-f4e09fd56660
+
+![Screenshot 2024-09-09 at 11 27 00 AM](https://github.com/user-attachments/assets/829efa96-b273-441a-9521-13ab34b155bb)
